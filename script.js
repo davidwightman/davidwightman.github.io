@@ -20,17 +20,20 @@ var clicks = 0;
 
 
 
-var xOrO = document.getElementById("clicks").innerHTML
-function xoSelector () {
-	if (clicks%2 === 0){
-		xOrO==="http://www.lostjungle.com/games_jul_2014/novel/tictactoe/50x50.png";
-	} else {
-		xOrO===("http://johnscabin.com/tic%20tac%20toe/x.gif");
-}}
-
-
+var xOrO = ("clicks")
 $(function occupySquare() {
   $(".box").on("click", function (event){
     $(event.target).css("background", "url(xOrO) no-repeat");
   });
 });
+
+
+
+function xoSelector () {
+	if (clicks%2 === 0){
+		xOrO==="o.png";
+	} else {
+		xOrO===("x.gif");
+}}
+
+
