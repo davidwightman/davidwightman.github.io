@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>TIC TAC TOE</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 TICTACTOE</br></br>
@@ -21,9 +22,18 @@ TICTACTOE</br></br>
 
 Instructions:</br>
 1. Each player should enter their name.</br>
-2. Play tic tac toe. Player X moves first.</br></br>
+2. Play tic tac toe. Player O moves first.</br></br>
 
-    <p>Clicks: <a id="clicks">0</a></p>
+    <p><a id="clicks"></a></p>
+
+
+			<button onclick="myFunction()">Play again?</button>
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
 
 <div>
     <p>Player 1: X</p>
