@@ -19,7 +19,7 @@ getInput ()
 var clicks = 0;
     function onClick() {
         clicks += 1;
-        var xO = (clicks%2 ===0)? "It's your turn, Player O.":"It's your turn, Player X."
+        var xO = (clicks%2 ===0)? "":""
         document.getElementById("clicks").innerHTML = xO;
 		//$(event.target).css("background", "url(o.png) no-repeat");
 		win()
@@ -38,7 +38,7 @@ var clicks = 0;
 
 var clicks2 = 0;
 $(function occupySquare() {
-  $(".box").on("click", function (event){
+  $(".box").one("click", function (event){
     clicks2 += 1;
     var xO = (clicks2%2 ===0)? "url(x.gif) no-repeat" : "url(o.png) no-repeat"
   //  console.log(clicks2)
@@ -64,7 +64,7 @@ console.log(box1)
 
 	if (x===box1 && x===box2 && x===box3){
 		alert("Player X won the game! Nice job, bro.")
-	}	else if (o===box4 && o===box5 && o===box6){
+	}	else if (o===box1 && o===box2 && o===box3){
 		alert("Player O won the game! Nice job, bro.")
 	} 	else if (x===box4 && x===box5 && x===box6){
 		alert("Player X won the game! Nice job, bro.")
@@ -94,9 +94,57 @@ console.log(box1)
 		alert("Player X won the game! Nice job, bro.")
 	}	else if (o===box3 && o===box5 && o===box7){
 		alert("Player O won the game! Nice job, bro.")
-	} 	else if (clicks===9) {
+	}	
+
+		else if (x===box1 && x===box3 && x===box5 && x===box8){
 		alert("It's a tie. Life!")
-	}
+	}	else if (x===box4 && x===box5 && x===box3 && x===box9){
+		alert("It's a tie. Life!")
+	}	else if (x===box1 && x===box5 && x===box6 && x===box7){
+		alert("It's a tie. Life!")
+	}	else if (x===box2 && x===box5 && x===box7 && x===box9){
+		alert("It's a tie. Life!")
+	}	
+
+		else if (x===box3 && x===box4 && x===box5 && x===box7){
+		alert("It's a tie. Life!")
+	}	else if (x===box2 && x===box4 && x===box5 && x===box9){
+		alert("It's a tie. Life!")
+	}	else if (x===box2 && x===box5 && x===box6 && x===box7){
+		alert("It's a tie. Life!")
+	}	else if (x===box1 && x===box5 && x===box6 && x===box8){
+		alert("It's a tie. Life!")
+	}	
+
+		else if (x===box1 && x===box6 && x===box7 && x===box8){
+		alert("It's a tie. Life!")
+	}	else if (x===box2 && x===box6 && x===box7 && x===box9){
+		alert("It's a tie. Life!")
+	}	else if (x===box2 && x===box3 && x===box4 && x===box9){
+		alert("It's a tie. Life!")
+	}	else if (x===box1 && x===box3 && x===box4 && x===box8){
+		alert("It's a tie. Life!")
+	}	
+		else if (x===box2 && x===box4 && x===box7 && x===box9){
+		alert("It's a tie. Life!")
+	}	else if (x===box1 && x===box2 && x===box6 && x===box7){
+		alert("It's a tie. Life!")
+	}	else if (x===box1 && x===box3 && x===box6 && x===box8){
+		alert("It's a tie. Life!")
+	}	else if (x===box3 && x===box4 && x===box8 && x===box9){
+		alert("It's a tie. Life!")
+	}	
+
+		
+
+
+
+
+
+
+	// else if (clicks===9) {
+	// 	alert("It's a tie. Life!")
+	// }
 	// else (box1 box2 box3 box4 box5 box6 box7 box8 box9){
 	// 	alert("It's a tie. Life!")
 	// }
