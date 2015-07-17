@@ -63,76 +63,76 @@ console.log(box1)
 	var box9 = $("#box9").css("background-Image");
 
 	if (x===box1 && x===box2 && x===box3){
-		alert("Player X won the game! Nice job, bro.")
+		$("#modal").fadeIn(2000)
 	}	else if (o===box1 && o===box2 && o===box3){
-		alert("Player O won the game! Nice job, bro.")
+		$("#modalO").fadeIn(2000)
 	} 	else if (x===box4 && x===box5 && x===box6){
-		alert("Player X won the game! Nice job, bro.")
+		$("#modal").fadeIn(2000)
 	}	else if (o===box4 && o===box5 && o===box6){
-		alert("Player O won the game! Nice job, bro.")
+		$("#modalO").fadeIn(2000)
 	} 	else if (x===box7 && x===box8 && x===box9){
-		alert("Player X won the game! Nice job, bro.")
+		$("#modal").fadeIn(2000)
 	}	else if (o===box7 && o===box8 && o===box9){
-		alert("Player O won the game! Nice job, bro.")
+		$("#modalO").fadeIn(2000)
 	} 	else if (x===box1 && x===box4 && x===box7){
-		alert("Player X won the game! Nice job, bro.")
+		$("#modal").fadeIn(2000)
 	}	else if (o===box1 && o===box4 && o===box7){
-		alert("Player O won the game! Nice job, bro.")
+		$("#modalO").fadeIn(2000)
 	} 	else if (x===box2 && x===box5 && x===box8){
-		alert("Player X won the game! Nice job, bro.")
+		$("#modal").fadeIn(2000)
 	}	else if (o===box2 && o===box5 && o===box8){
-		alert("Player O won the game! Nice job, bro.")
+		$("#modalO").fadeIn(2000)
 	} 	else if (x===box3 && x===box6 && x===box9){
-		alert("Player X won the game! Nice job, bro.")
+		$("#modal").fadeIn(2000)
 	}	else if (o===box3 && o===box6 && o===box9){
-		alert("Player O won the game! Nice job, bro.")
+		$("#modalO").fadeIn(2000)
 	} 	else if (x===box1 && x===box5 && x===box9){
-		alert("Player X won the game! Nice job, bro.")
+		$("#modal").fadeIn(2000)
 	}	else if (o===box1 && o===box5 && o===box9){
-		alert("Player O won the game! Nice job, bro.")
+		$("#modalO").fadeIn(2000)
 	} 	else if (x===box3 && x===box5 && x===box7){
-		alert("Player X won the game! Nice job, bro.")
+		$("#modal").fadeIn(2000)
 	}	else if (o===box3 && o===box5 && o===box7){
-		alert("Player O won the game! Nice job, bro.")
+		$("#modalO").fadeIn(2000)
 	}	
 
 		else if (x===box1 && x===box3 && x===box5 && x===box8){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box4 && x===box5 && x===box3 && x===box9){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box1 && x===box5 && x===box6 && x===box7){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box2 && x===box5 && x===box7 && x===box9){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	
 
 		else if (x===box3 && x===box4 && x===box5 && x===box7){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box2 && x===box4 && x===box5 && x===box9){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box2 && x===box5 && x===box6 && x===box7){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box1 && x===box5 && x===box6 && x===box8){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	
 
 		else if (x===box1 && x===box6 && x===box7 && x===box8){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box2 && x===box6 && x===box7 && x===box9){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box2 && x===box3 && x===box4 && x===box9){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box1 && x===box3 && x===box4 && x===box8){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	
 		else if (x===box2 && x===box4 && x===box7 && x===box9){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box1 && x===box2 && x===box6 && x===box7){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box1 && x===box3 && x===box6 && x===box8){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	else if (x===box3 && x===box4 && x===box8 && x===box9){
-		alert("It's a tie. Life!")
+		$("#modalTie").fadeIn(2000)
 	}	
 
 		
@@ -155,3 +155,27 @@ console.log(box1)
 
 // }
 
+
+
+
+$("#open-modal").on("click", function(){
+$("#modal").toggle();
+});
+
+
+
+
+$("#closeX").on("click", function(){
+
+	$("#modal").toggle();
+});
+
+$("#closeO").on("click", function(){
+
+	$("#modalO").toggle();
+});
+
+$("#closeTie").on("click", function(){
+
+	$("#modalTie").toggle();
+});

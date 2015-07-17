@@ -20,6 +20,8 @@ TICTACTOE</br></br>
 <div class="box" id="box9" onClick="onClick()"></div>
 </div></br>
 
+
+
 Instructions:</br>
 1. Each player should enter their name.</br>
 2. Play tic tac toe. Player O moves first.</br></br>
@@ -27,13 +29,7 @@ Instructions:</br>
     <p><a id="clicks"></a></p>
 
 
-			<button onclick="myFunction()">Play again?</button>
-
-<script>
-function myFunction() {
-    location.reload();
-}
-</script>
+			
 
 <div>
     <p>Player 1: X</p>
@@ -43,6 +39,102 @@ function myFunction() {
     <p>Player 2: O</p>
     <button class="button" type="button">enter your name</button>  <input class="input" type="text" >
 </div>   
+
+
+
+
+
+
+
+
+ <div id="modal">
+        
+        <div class='modal-content'>
+            
+            <div class='modal-header'>
+                <h3>Player X wins! Nice job, bro!</h3>
+                <button id="closeX">X</button>        
+            </div>
+            
+            <div class='modal-body'>
+                
+
+
+                <center><button onclick="myFunction()">Play again?</button>
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script></center>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+
+ <div id="modalO">
+        
+        <div class='modal-content'>
+            
+            <div class='modal-header'>
+                <h3>Player O wins! Nice job, bro!</h3>
+                <button id="closeO">X</button>        
+            </div>
+            
+            <div class='modal-body'>
+                
+
+
+                <center><button onclick="myFunction()">Play again?</button>
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script></center>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+ <div id="modalTie">
+        
+        <div class='modal-content'>
+            
+            <div class='modal-header'>
+                <h3>It's a tie game. Well, THAT was exciting, no?</h3>
+                <button id="closeTie">X</button>        
+            </div>
+            
+            <div class='modal-body'>
+                
+
+
+                <center><button onclick="myFunction()">Play again?</button>
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script></center>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type ="text/javascript" src = "script.js"></script>
