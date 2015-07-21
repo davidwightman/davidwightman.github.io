@@ -1,47 +1,30 @@
+// enter your names
+
 function getInput (){
-//var button = document.querySelector(".button")
 	$("button").on("click", function (event){
-//button.addEventListener("click", function (event){
-//var input = document.getElementsByClassName("input")[0].value;
 		var input = $(event.target).siblings("input").val()
 		$(event.target).siblings("p").text(input);
 	})
 }
 getInput ()
 
-// var clicks = 0;
-//     function onClick() {
-//         clicks += 1;
-//         var xO = (clicks%2 ===0)? "X":"O"
-//         document.getElementById("clicks").innerHTML = xO;
-//     };
+// monitor clicks
 
 var clicks = 0;
     function onClick() {
         clicks += 1;
         var xO = (clicks%2 ===0)? "":""
         document.getElementById("clicks").innerHTML = xO;
-		//$(event.target).css("background", "url(o.png) no-repeat");
 		win()
     };
 
-// function xoSelector () {
-// 	if (clicks%2 == 0){
-	
-// $(function occupySquare() {
-//   $(".box").on("click", function (event){
-//     $(event.target).css("background", "url(o.png) no-repeat");
-//   });
-// });
-
-// 	} else {
+// alternate X and Os in background of div
 
 var clicks2 = 0;
 $(function occupySquare() {
   $(".box").one("click", function (event){
     clicks2 += 1;
     var xO = (clicks2%2 ===0)? "url(x.gif) no-repeat" : "url(o.png) no-repeat"
-  //  console.log(clicks2)
     $(event.target).css("background", xO);
 	win()
   });
@@ -50,16 +33,7 @@ $(function occupySquare() {
 
 
 
-
-
-
-
-
-
-
-
-
-
+//Winning and tie combinations with modal responses
 
 var x = "url(file:///Users/davidwightman/dev/davidwightman.github.io/x.gif)"
 var o = "url(file:///Users/davidwightman/dev/davidwightman.github.io/o.png)"
@@ -149,35 +123,17 @@ console.log(box1)
 		$("#modalTie").fadeIn(2000)
 	}	
 
-		
-
-
-
-
-
-
-	// else if (clicks===9) {
-	// 	alert("It's a tie. Life!")
-	// }
-	// else (box1 box2 box3 box4 box5 box6 box7 box8 box9){
-	// 	alert("It's a tie. Life!")
-	// }
+	
 }
 
 
-// function tie(){
 
-// }
-
-
+//modal information
 
 
 $("#open-modal").on("click", function(){
 $("#modal").toggle();
 });
-
-
-
 
 $("#closeX").on("click", function(){
 

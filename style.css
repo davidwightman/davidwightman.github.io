@@ -26,11 +26,16 @@
 }
 
 
+.player {
+	background-color: white;
+	width: 210px;
+}
 
+body {background: url("background.jpg");}
 
-
-
-
+p {
+	font-family: helvetica;
+}
 
 
 
