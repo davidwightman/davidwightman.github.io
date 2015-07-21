@@ -1,65 +1,73 @@
+//enter name
+
 function getInput (){
-//var button = document.querySelector(".button")
 	$("button").on("click", function (event){
-//button.addEventListener("click", function (event){
-//var input = document.getElementsByClassName("input")[0].value;
 		var input = $(event.target).siblings("input").val()
 		$(event.target).siblings("p").text(input);
 	})
 }
 getInput ()
 
-// var clicks = 0;
-//     function onClick() {
-//         clicks += 1;
-//         var xO = (clicks%2 ===0)? "X":"O"
-//         document.getElementById("clicks").innerHTML = xO;
-//     };
+//monitor clicks
 
 var clicks = 0;
     function onClick() {
         clicks += 1;
         var xO = (clicks%2 ===0)? "":""
         document.getElementById("clicks").innerHTML = xO;
-		//$(event.target).css("background", "url(o.png) no-repeat");
 		win()
     };
 
-// function xoSelector () {
-// 	if (clicks%2 == 0){
-	
-// $(function occupySquare() {
-//   $(".box").on("click", function (event){
-//     $(event.target).css("background", "url(o.png) no-repeat");
-//   });
-// });
 
-// 	} else {
 
+
+//set array to monitor occupied spaces, move x and o into div
+
+array = []
 var clicks2 = 0;
 $(function occupySquare() {
   $(".box").one("click", function (event){
     clicks2 += 1;
-    var xO = (clicks2%2 ===0)? "url(x.gif) no-repeat" : "url(o.png) no-repeat"
-  //  console.log(clicks2)
+ 		
+        var clickedBox = $(event.target).attr("id") 
+       array.push(clickedBox)
+
+    var xO = (clicks2%2 ===0)? "url(o.png) no-repeat" : "url(o.png) no-repeat"
+  	var aI = (clicks2%2 ===0)? "url(x.gif) no-repeat" : "url(x.gif) no-repeat"
+  
     $(event.target).css("background", xO);
-	win()
+win()
+
+//computer AI
+		$(function computerMove (){
+
+		
+			//choose a random spot
+			var cMove = Math.floor(Math.random()*9)+1;
+
+			//while the randomly chosen spot has a background
+
+			console.log("outside loop: ", cMove)
+
+			 if (array.indexOf("box" + cMove) !== -1 && array.length !== 9){	
+			 computerMove();
+			 } else if (array.length<=8) { 
+			 	var clickedBoxComputer = ("box" + cMove)
+			 	$("#box" + cMove).css("background", aI);
+			 	win()
+			 	
+			 	array.push(clickedBoxComputer)
+			 	console.log("array:" +array.length)
+			 	$(event.target).css("background", xO);
+			 	} 
+			 	win()
+		});
+
+win()
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Winning and tie combinations with modal responses
 
 var x = "url(file:///Users/davidwightman/dev/davidwightman.github.io/x.gif)"
 var o = "url(file:///Users/davidwightman/dev/davidwightman.github.io/o.png)"
@@ -148,36 +156,14 @@ console.log(box1)
 	}	else if (x===box3 && x===box4 && x===box8 && x===box9){
 		$("#modalTie").fadeIn(2000)
 	}	
-
-		
-
-
-
-
-
-
-	// else if (clicks===9) {
-	// 	alert("It's a tie. Life!")
-	// }
-	// else (box1 box2 box3 box4 box5 box6 box7 box8 box9){
-	// 	alert("It's a tie. Life!")
-	// }
+	
 }
 
-
-// function tie(){
-
-// }
-
-
-
+// modal information
 
 $("#open-modal").on("click", function(){
 $("#modal").toggle();
 });
-
-
-
 
 $("#closeX").on("click", function(){
 
